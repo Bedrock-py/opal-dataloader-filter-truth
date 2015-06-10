@@ -10,13 +10,10 @@
 # permission of the Georgia Tech Research Institute.
 #****************************************************************/
 
-from ..filter_utils import Filter 
+from dataloader.utils import *
 import time
 import numpy as np
 from sklearn import preprocessing
-
-def get_classname():
-    return 'TruthLabels'
 
 class TruthLabels(Filter):
     def __init__(self):
