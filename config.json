@@ -1,0 +1,14 @@
+{ "opal-dataloader-filter-truth":
+        {
+            "description": "Truth label extraction",
+            "host": "github.gatech.edu",
+            "repo": "Bedrock/opal-dataloader-filter-truth.git",
+            "units": "TruthLabels.py TruthLabelsNumeric.py",
+            "supports": "",
+            "python_dependencies": "",
+            "system_dependencies": "",
+            "api": "dataloader",
+            "interface": "filters",
+            "installation_script": ""
+        }
+}
