@@ -11,9 +11,6 @@
 #****************************************************************/
 
 from dataloader.utils import *
-import time
-import numpy as np
-from sklearn import preprocessing
 
 class TruthLabelsNumeric(Filter):
     def __init__(self):
@@ -27,11 +24,12 @@ class TruthLabelsNumeric(Filter):
         self.parameters_spec = []
         self.possible_names = ['class','truth']
 
+    # naive, needs improvement
     def check(self, name, col):
         return True
 
+    # writes the truth labels to a separate file
     def apply(self, conf):
-        #sets everything to a 0-n scale, even if starting at 1
         labels = list(set(conf['values']))
         keys = [labels.index(x) for x in conf['values']]
         with open(conf['storepath'] + 'truth_labels.csv', 'w') as labelsFile:

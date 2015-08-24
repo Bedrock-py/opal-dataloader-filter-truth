@@ -11,9 +11,6 @@
 #****************************************************************/
 
 from dataloader.utils import *
-import time
-import numpy as np
-from sklearn import preprocessing
 
 class TruthLabels(Filter):
     def __init__(self):
@@ -27,9 +24,11 @@ class TruthLabels(Filter):
         self.parameters_spec = []
         self.possible_names = ['class','truth']
 
+    # naive, needs improvement
     def check(self, name, col):
         return True
 
+    # writes the truth labels to a separate file
     def apply(self, conf):
         labels = list(set(conf['values']))
         keys = [labels.index(x) for x in conf['values']]
