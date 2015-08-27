@@ -11,6 +11,7 @@
 #****************************************************************/
 
 from dataloader.utils import *
+import os
 
 class TruthLabelsNumeric(Filter):
     def __init__(self):
@@ -32,6 +33,8 @@ class TruthLabelsNumeric(Filter):
     def apply(self, conf):
         labels = list(set(conf['values']))
         keys = [labels.index(x) for x in conf['values']]
+        if not os.path.exists(conf['storepath']):
+            os.makedirs(conf['storepath'])
         with open(conf['storepath'] + 'truth_labels.csv', 'w') as labelsFile:
             line = ','.join([str(x) for x in keys])
             labelsFile.write(line)
