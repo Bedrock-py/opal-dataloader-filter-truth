@@ -18,9 +18,9 @@ def opalRegistration():
     from bedrock.core.opals import manage_opals
     algs = ['TruthLabels','TruthLabelsNumeric']
     for alg in algs:
-        success = manage_opals("add","filter","opals.truth.{0}.{0}".format(alg))
+        success = manage_opals("add","filters","opals.truth.{0}.{0}".format(alg))
         if (success == False):
-            success = manage_opals("reload","filter","opals.truth.{0}.{0}".format(alg))
+            success = manage_opals("reload","filters","opals.truth.{0}.{0}".format(alg))
             if (success == False):
                 raise
 
