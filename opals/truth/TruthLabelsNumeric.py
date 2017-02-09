@@ -10,7 +10,7 @@
 # permission of the Georgia Tech Research Institute.
 #****************************************************************/
 
-from dataloader.utils import *
+from bedrock.dataloader.utils import *
 import os
 
 class TruthLabelsNumeric(Filter):

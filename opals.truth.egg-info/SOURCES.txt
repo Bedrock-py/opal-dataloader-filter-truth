@@ -1,9 +1,0 @@
-opals.truth.egg-info/PKG-INFO
-opals.truth.egg-info/SOURCES.txt
-opals.truth.egg-info/dependency_links.txt
-opals.truth.egg-info/namespace_packages.txt
-opals.truth.egg-info/requires.txt
-opals.truth.egg-info/top_level.txt
-opals/truth/TruthLabels.py
-opals/truth/TruthLabelsNumeric.py
-opals/truth/__init__.py
